@@ -1,1 +1,1 @@
-results_width
+isdigit
