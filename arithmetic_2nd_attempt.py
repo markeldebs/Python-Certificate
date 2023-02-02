@@ -68,10 +68,8 @@ def arithmetic_arranger(problems, results_opt = False):
         third_line += '-'*(lower_bound_comp[i]) + space*4
         results_line += space*(lower_bound_comp[i] - results_width[i]) + str(results[i]) + space*4
 
-    first_line = first_line.rstrip()
-    first_line += "\n"
-    second_line = second_line.rstrip()
-    second_line += "\n"
+    first_line = first_line.rstrip() + "\n"
+    second_line = second_line.rstrip() + "\n"
     third_line = str(third_line).rstrip()
     results_line = results_line.rstrip()
 
