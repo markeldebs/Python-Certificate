@@ -59,16 +59,17 @@ def add_time(start, duration, day = ''):
     if day != "":
         week_index = week_lower.index(day.lower())
         # print(week_index)
-        week_index = int(n_days/2 + week_index)%6
+        week_index = int(n_days/2 + week_index)%7
         day = week[week_index]
+        
         
         # Creating print statement
         if days_later == 0:
-            new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase +" "+ week[week_index]
+            new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase +", "+ week[week_index]
         elif days_later == 1:
-            new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase +" "+ week[week_index]+ " (next day)"
+            new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase +", "+ week[week_index]+ " (next day)"
         else:
-            new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase + "+" "+ week[week_index] (" + days_later + " days later)"
+            new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase + ", "+ week[week_index] + " (" + str(days_later) + " days later)"
             
         new_time.rstrip()
         return(new_time)
@@ -105,7 +106,7 @@ def add_time(start, duration, day = ''):
     elif days_later == 1:
         new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase + " (next day)"
     else:
-        new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase + " (" + days_later + " days later)"
+        new_time = str(new_day_hours)+":"+ str(new_day_minutes)+ " " +new_day_phase + " (" + str(days_later) + " days later)"
         
     new_time.rstrip()
     return(new_time)
@@ -113,5 +114,5 @@ def add_time(start, duration, day = ''):
 
     # expected = "5:42 PM"
 
-print(add_time("10:55 AM", "12:06", "TuesdAy")) 
+print(add_time("10:55 AM", "24:06", "")) 
 
