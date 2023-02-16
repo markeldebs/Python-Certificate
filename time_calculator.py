@@ -114,5 +114,5 @@ def add_time(start, duration, day = ''):
 
     # expected = "5:42 PM"
 
-print(add_time("10:55 AM", "24:06", "")) 
+print(add_time("10:55 AM", "00:06", "")) 
 
